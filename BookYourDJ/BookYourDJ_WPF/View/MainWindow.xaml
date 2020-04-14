@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:BookYourDJ_WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top" VerticalAlignment="Top">
+                <MenuItem Header="Animateurs">
+                    <MenuItem Header="Liste" Click="OnAnimatorListClicked"></MenuItem>
+                    <MenuItem Header="Ajouter"></MenuItem>
+                </MenuItem>
+            </Menu>
+        <Frame x:Name="_mainFrame" />
+    </DockPanel>
 </Window>

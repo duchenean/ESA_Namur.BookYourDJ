@@ -12,14 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.Entity;
+using BookYourDJ_WPF.Model;
 
-namespace BookYourDJ_WPF {
+namespace BookYourDJ_WPF.View
+{
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour AnimatorsListPage.xaml
     /// </summary>
-    public partial class MainWindow : Window {
-        public MainWindow() {
+    public partial class AnimatorsListPage : Page
+    {
+        public AnimatorsListPage()
+        {
             InitializeComponent();
+            BookYourDJEntities entities = new BookYourDJEntities();
+            gridAnimators.ItemsSource = entities.Animators.ToList();
         }
     }
 }
